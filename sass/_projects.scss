@@ -1,0 +1,123 @@
+.projects{
+    h2{
+        color: $primary;
+        font-family: $font-sec;
+        text-transform: capitalize;
+    }
+    &-title{
+        text-transform: uppercase;
+    }
+    height: 150vh;
+    @media only screen and (max-width: 1099px){
+        height: 250vh;
+        
+    }
+    @media only screen and (max-width: 720px){
+        height: 300vh;
+    }
+    &-wrapper{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr ;
+        justify-items: center;
+        align-items: center;
+        
+        &-cards{
+            margin-top: 10%;
+            border-radius: 1rem;
+            box-shadow: rgba(216, 125, 125, 0.6) 2px 2px 150px 10px;
+            background-color: aliceblue;
+            width: 35rem;
+            height: 35rem;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 0.15fr 0.7fr 0.15fr;
+            &-title{
+                color: rgb(119, 37, 37);
+                border-bottom: 2px black solid;
+            }
+            &:nth-child(1) &-content{
+                background-image:  url(../../img/landingInsure.png);
+                
+            }
+            &:nth-child(2) &-content{
+                background-image:  url(../../img/profilecard.png);
+                
+            }
+            &:nth-child(3) &-content{
+                background-image:  url(../../img/portfolio.png);
+                
+            }
+            &-content{
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+            }   
+            &-links{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr;
+                border-top: 2px black solid;
+                
+                
+                text-align: center;
+                &-github{
+                    a:hover{
+                        color: rgb(207, 93, 40);
+
+                    }
+                }
+                &-live{
+                    a:hover{
+                        color: rgb(11, 104, 50);
+
+                    }
+                }
+                
+                a{
+                    padding-top: 0.5rem;
+                    text-decoration: none;
+                    font-family: $font-sec;
+                    font-size: 1.5rem;
+                    color: white;
+                    height: 100%;
+                    display: block;
+                    z-index: 10;
+                    
+                    
+                    
+                }
+                i{
+                    font-size: 3rem;
+                    
+                    
+                }
+                div:nth-child(1){
+                    border-right: 1px black solid;
+                    background: rgb(11, 104, 50);
+                    &:hover{
+                        background-color: white;
+                    }
+                    
+                }
+                div:nth-child(2){
+                    border-left: 1px black solid;
+                    background: rgb(207, 93, 40);
+                    &:hover{
+                        background-color: white;
+                    }
+                }
+            }
+            
+        }
+        @media only screen and (max-width: 1099px) {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr  1fr;
+        }
+        @media only screen and (max-width: 720px){
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+        }
+        
+    }
+}

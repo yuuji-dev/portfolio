@@ -1,0 +1,58 @@
+$font-prim:  'Open Sans', sans-serif;
+$font-sec: 'Overpass',  sans-serif;
+
+
+:root{
+    font-size: 62.5%;
+}
+*,*::after,*::before{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.flex{
+    display: flex;
+    &-jf-cc{
+        justify-content: center;
+    }
+    &-al-ic{
+        align-items: center;
+    }
+}
+.txt{
+    &-center{
+        text-align: center;
+    }
+}
+body{
+    
+    h1{
+        font-size: 5rem;
+        color: whitesmoke;
+        max-width: 99%;
+        font-family: $font-prim;
+    }
+    h2{
+        font-size: 3rem;
+        color: whitesmoke;
+        max-width: 99%;
+        font-family: $font-prim;
+    }
+    @media only screen and (min-width: 1440px) {
+        > :not(canvas){
+            max-width: 144rem;
+            margin: 0 auto;
+        }
+       
+    }
+    position: relative;
+}
+.particles-js-canvas-el{
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+    background-color: black;
+    top: 0;
+    overflow: hidden;
+}
